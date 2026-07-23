@@ -1,0 +1,9 @@
+pandas
+numpy
+langchain
+langchain-community
+chromadb
+sentence-transformers
+streamlit
+tqdm
+python-dotenv

@@ -1,0 +1,35 @@
+{
+  "notes": "Hand-built eval set. Fill in `expected_products` (product IDs known to have relevant reviews) and `expect_abstain` for questions that should NOT be answerable from the dataset. Use this to measure retrieval precision/recall and abstention behavior, not just 'looks right'.",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Do customers complain about battery life on tablets?",
+      "category_filter": null,
+      "expected_products": [],
+      "expect_abstain": false
+    },
+    {
+      "id": "q2",
+      "question": "Is the screen quality good on Kindle devices?",
+      "category_filter": null,
+      "expected_products": [],
+      "expect_abstain": false
+    },
+    {
+      "id": "q3",
+      "question": "What do people say about customer service response time?",
+      "category_filter": null,
+      "expected_products": [],
+      "expect_abstain": true,
+      "abstain_reason": "Dataset is product reviews, not customer service interactions — this should trigger an abstain if not enough evidence exists."
+    },
+    {
+      "id": "q4",
+      "question": "How is the build quality of a product that doesn't exist in this dataset, like a 'SuperWidget 9000'?",
+      "category_filter": null,
+      "expected_products": [],
+      "expect_abstain": true,
+      "abstain_reason": "Adversarial test — product not in dataset, should abstain rather than hallucinate."
+    }
+  ]
+}
